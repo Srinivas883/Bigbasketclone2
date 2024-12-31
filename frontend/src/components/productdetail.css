@@ -1,0 +1,175 @@
+.productdetail {
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.prosec0 {
+    display: none;
+}
+
+.prosec1 {
+    background-color: white;
+    border: solid rgb(136, 136, 136) 1px;
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+}
+
+.prosec1 img {
+    width: 400px;
+    border: solid rgb(189, 189, 189) 1px;
+    border-radius: 15px;
+}
+
+.fresho,
+.fresho0 {
+    text-decoration: underline;
+    color: rgb(134, 134, 134);
+    font-size: 20px;
+}
+
+.productname,
+.productname0 {
+    font-size: 40px;
+    margin: 0 0 15px 0;
+
+}
+
+.productorgprice {
+    color: rgb(134, 134, 134);
+    font-size: 20px;
+}
+
+.productorgprice span {
+    text-decoration: line-through;
+}
+
+.productprice {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+}
+
+.yousave {
+    color: #4e7a00;
+    font-size: 30px;
+
+}
+
+.yousave span {
+    font-weight: bold;
+}
+
+.taxes {
+    color: rgb(134, 134, 134);
+    font-size: 20px;
+}
+
+.proaddbtn {
+    background-color: #CC0001;
+    color: white;
+    margin: 15px 0 0 0;
+    font-size: 30px;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    border: solid 2px #CC0001;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+
+}
+
+.proaddbtn:hover {
+    color: #CC0001;
+    background-color: white;
+    border: solid 2px #CC0001;
+    transition: .3s;
+}
+
+@media (max-width:950px) {
+
+    .prosec1 {
+        padding: 20px;
+    }
+
+    .prosec1 img {
+        width: 350px;
+    }
+
+}
+
+@media (max-width:850px) {
+
+    .prosec1 img {
+        width: 300px;
+    }
+
+    .fresho,
+    .fresho0,
+    .productorgprice,
+    .taxes {
+        font-size: 18px;
+    }
+
+    .productname,
+    .productname0 {
+        font-size: 30px;
+        margin: 0 0 15px 0;
+
+    }
+
+    .productprice {
+        font-size: 25px;
+    }
+
+    .yousave {
+        font-size: 25px;
+
+    }
+
+    .proaddbtn {
+        margin: 15px 0 0 0;
+        font-size: 25px;
+        padding: 15px 35px;
+        height: 80px;
+
+    }
+
+    .productdetail {
+        gap: 8%;
+    }
+}
+
+@media (max-width:700px) {
+
+    .productdetail{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prosec1 img {
+        width: 250px;
+    }
+    .prosec1{
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .proaddbtn {
+        font-size: 25px;
+        padding: 10px 25px;
+        height: 60px;
+
+    }
+
+
+}

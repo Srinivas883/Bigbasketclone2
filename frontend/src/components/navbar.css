@@ -1,0 +1,222 @@
+.Navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.bigblogo {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+.categorybtn,
+.categorybtn1 {
+    background-color: #5E9400;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    gap: 10px;
+    color: white;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border: 2px solid white;
+    flex-shrink: 1;
+}
+
+.categorybtn1 {
+    border: rgba(0, 0, 0, 0.445) solid 2px;
+}
+
+.categorybtn img,
+.categorybtn1 img {
+    height: 10px;
+}
+
+.searchbar img {
+    width: 20px;
+}
+
+.searchbar input {
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.searchbar input::placeholder {
+    color: rgb(180, 180, 180);
+}
+
+.searchbar {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    border: solid 1px rgb(190, 189, 189);
+    padding: 10px;
+    width: 550px;
+    border-radius: 10px;
+}
+
+.loginbtn {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loggedinbtn {
+    background-color: #CC0000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart img {
+    width: 50px;
+}
+
+.cart p {
+    background-color: black;
+    position: absolute;
+    color: white;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+
+.menubar img {
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+    display: none;
+
+}
+
+.menubarbox {
+    display: none;
+}
+
+
+
+.cart1 {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart1 img {
+    width: 50px;
+}
+
+.cart1 p {
+    background-color: black;
+    position: absolute;
+    color: white;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+}
+
+@media (max-width: 700px) {
+    .bigblogo {
+        height: 30px;
+        width: auto;
+    }
+
+    .cart,
+    .loggedinbtn,
+    .loginbtn,
+    .categorybtn {
+        display: none;
+    }
+
+    .menubar img,
+    .menubarbox {
+        display: block;
+    }
+
+    .menubarbox {
+        background-color: rgba(0, 0, 0, 0.938);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 97%;
+        position: absolute;
+        z-index: 200;
+        top: 10px;
+        right: -110%;
+        padding: 20px 0 20px 0;
+    }
+
+    .useremail {
+        color: #5E9400;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+    .menubarbox h2 {
+        font-weight: lighter;
+        font-size: 35px;
+    }
+
+    .cart p {
+        background-color: rgb(206, 204, 204);
+        color: black;
+    }
+
+    .menubarboxsec1 {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logout {
+        width: 80px;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+
+    input::placeholder{
+        font-size: 12px;
+    }
+
+    .bigblogo {
+        height: 24px;
+        width: auto;
+    }
+
+}
