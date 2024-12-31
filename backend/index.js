@@ -8,7 +8,7 @@ app.use(express.json())
 
 mongoose.connect("mongodb+srv://sri:123@cluster0.hk41k.mongodb.net/Bigbasketclone?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => { console.log("connected to mongodb atlas server") })
-    .catch(() => console.lo("failed to connect to atlas"))
+    .catch(() => console.log("failed to connect to atlas"))
 
 const addremovebtn = mongoose.model("addremovebtn", { emailid: String, key: String, addbtnstatus: String }, "Addremovebtn")
 
@@ -34,9 +34,9 @@ app.post('/backend', (req, res) => {
     const emailfromcart = req.body.emailfromcart
     if (trigger) {
         addremovebtn.updateMany(
-            { emailid: emailfromcart, addbtnstatus:"Remove" },
-            {$set:{addbtnstatus:"Add"}}
-        ).then((result)=>console.log(result)).catch((err)=>{console.log(err)})
+            { emailid: emailfromcart, addbtnstatus: "Remove" },
+            { $set: { addbtnstatus: "Add" } }
+        ).then((result) => console.log(result)).catch((err) => { console.log(err) })
     }
 
     const loggedemail = req.body.loggedemail
