@@ -32,13 +32,13 @@ function Productdetail() {
             if (user) {
                 setcurrentuseremail(user.email)
                 setloginstatus(true)
-                // axios.post("http://localhost:5000/backend", { loggedemail: user.email })
+                // axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: user.email })
                 //     .then((data) => {
                 //         setaddbtnval(data.data)
                 //     })
                 //     .catch((err) => { console.log(err) })
 
-                axios.post("http://localhost:5000/backend", { loggedemail: user.email })
+                axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: user.email })
                     .then((data) => {
                         setaddbtnval(data.data)
                         const setremovebtns = []
@@ -80,9 +80,9 @@ function Productdetail() {
             return;
         }
         if (addbtnval[id - 1].addbtnstatus == "Add") {
-            axios.post("http://localhost:5000/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Remove" })
+            axios.post("https://bigbasketclone2.onrender.com/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Remove" })
                 .then(() => {
-                    axios.post("http://localhost:5000/backend", { loggedemail: currentuseremail })
+                    axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: currentuseremail })
                         .then((data) => {
                             setaddbtnval(data.data)
                             const setremovebtns = []
@@ -98,15 +98,15 @@ function Productdetail() {
                         })
                         .catch((err) => { console.log(err) })
                 })
-            // axios.post("http://localhost:5000/setbasketvalue", { addbtnstatus: "Remove" })
+            // axios.post("https://bigbasketclone2.onrender.com/setbasketvalue", { addbtnstatus: "Remove" })
             //     .then((data) => {
             //         console.log(data.data)
             //         setbsktvalue(data.data)
             //     }).catch((err) => { console.log(err) })
         } else {
-            axios.post("http://localhost:5000/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Add" })
+            axios.post("https://bigbasketclone2.onrender.com/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Add" })
                 .then(() => {
-                    axios.post("http://localhost:5000/backend", { loggedemail: currentuseremail })
+                    axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: currentuseremail })
                         .then((data) => {
                             setaddbtnval(data.data)
                             const setremovebtns = []
@@ -122,7 +122,7 @@ function Productdetail() {
                         })
                         .catch((err) => { console.log(err) })
                 })
-            // axios.post("http://localhost:5000/setbasketvalue", { addbtnstatus: "Add" })
+            // axios.post("https://bigbasketclone2.onrender.com/setbasketvalue", { addbtnstatus: "Add" })
             //     .then((data) => {
             //         console.log(data.data)
             //         setbsktvalue(data.data)

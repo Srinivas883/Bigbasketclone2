@@ -54,7 +54,7 @@ function SignUp() {
                     setpass("");
 
                     // sending emailid to backend
-                    axios.post("http://localhost:5000/backend", { user: user.toLowerCase() })
+                    axios.post("https://bigbasketclone2.onrender.com/backend", { user: user.toLowerCase() })
                         .then(() => { console.log("email sent to backend") })
                         .catch((err) => { console.log(err) })
 

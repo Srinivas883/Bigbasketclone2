@@ -44,7 +44,7 @@ function Cart() {
         auth.onAuthStateChanged(function (user) {
             if (user) {
                 setcurrentuseremail(user.email)
-                axios.post("http://localhost:5000/backend", { loggedemail: user.email })
+                axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: user.email })
                     .then((data) => {
                         // setaddbtnval(data.data)
                         const setremovebtns = []
@@ -86,9 +86,9 @@ function Cart() {
 
     function handleremovebtn(id) {
 
-        axios.post("http://localhost:5000/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Add" })
+        axios.post("https://bigbasketclone2.onrender.com/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Add" })
             .then(() => {
-                axios.post("http://localhost:5000/backend", { loggedemail: currentuseremail })
+                axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: currentuseremail })
                     .then((data) => {
                         // setaddbtnval(data.data)
                         const setremovebtns = []
@@ -117,7 +117,7 @@ function Cart() {
             }
             ).catch((err) => console.log(err))
 
-        // axios.post("http://localhost:5000/setbasketvalue", { addbtnstatus: "Add" })
+        // axios.post("https://bigbasketclone2.onrender.com/setbasketvalue", { addbtnstatus: "Add" })
         //     .then((data) => {
         //         console.log(data.data)
         //         setbsktvalue(data.data)
@@ -127,7 +127,7 @@ function Cart() {
     }
 
     function setcheckoutbtn() {
-        axios.post("http://localhost:5000/backend", { trigger: "alltrue", emailfromcart: currentuseremail })
+        axios.post("https://bigbasketclone2.onrender.com/backend", { trigger: "alltrue", emailfromcart: currentuseremail })
             .then(() => {
                 setremovebtn(0)
                 setsubtotal(0)

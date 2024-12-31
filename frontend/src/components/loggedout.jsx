@@ -77,7 +77,7 @@ function Loggedout() {
                 setloginstatus(true)
                 navigate('/')
                 setcurrentuseremail(user.email)
-                axios.post("http://localhost:5000/backend", { loggedemail: user.email })
+                axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: user.email })
                     .then((data) => {
                         setaddbtnval(data.data)
                         const setremovebtns = []
@@ -115,14 +115,14 @@ function Loggedout() {
     //     } else {
     //         const newStatus = addbtnval[id - 1].addbtnstatus === "Add" ? "Remove" : "Add";
 
-    //         axios.post("http://localhost:5000/updateaddbtnstatus", {
+    //         axios.post("https://bigbasketclone2.onrender.com/updateaddbtnstatus", {
     //             key: id,
     //             emailid: currentuseremail,
     //             addbtnstatus: newStatus
     //         })
     //             .then(() => {
-    //                 axios.post("http://localhost:5000/backend", { loggedemail: currentuseremail })
-    //                     .then((data) => {
+    //                 axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: currentuseremail })
+    //                     .then((data) => {https://bigbasketclone2.onrender.com
     //                         setaddbtnval(data.data); // Update the state with the latest data
     //                     })
     //                     .catch((err) => { console.log(err); });
@@ -140,9 +140,9 @@ function Loggedout() {
             navigate('/login')
         } else {
             if (addbtnval[id - 1].addbtnstatus == "Add") {
-                axios.post("http://localhost:5000/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Remove" })
+                axios.post("https://bigbasketclone2.onrender.com/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Remove" })
                     .then(() => {
-                        axios.post("http://localhost:5000/backend", { loggedemail: currentuseremail })
+                        axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: currentuseremail })
                             .then((data) => {
                                 setaddbtnval(data.data)
                                 const setremovebtns = []
@@ -158,7 +158,7 @@ function Loggedout() {
                             })
                             .catch((err) => { console.log(err) })
                     })
-                // axios.post("http://localhost:5000/setbasketvalue", { addbtnstatus: "Remove" })
+                // axios.post("https://bigbasketclone2.onrender.com/setbasketvalue", { addbtnstatus: "Remove" })
                 //     .then((data) => {
                 //         console.log(data.data)
                 //         setbsktvalue(data.data)
@@ -166,9 +166,9 @@ function Loggedout() {
 
             }
             else {
-                axios.post("http://localhost:5000/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Add" })
+                axios.post("https://bigbasketclone2.onrender.com/updateaddbtnstatus", { key: id, emailid: currentuseremail, addbtnstatus: "Add" })
                     .then(() => {
-                        axios.post("http://localhost:5000/backend", { loggedemail: currentuseremail })
+                        axios.post("https://bigbasketclone2.onrender.com/backend", { loggedemail: currentuseremail })
                             .then((data) => {
                                 setaddbtnval(data.data)
                                 const setremovebtns = []
@@ -183,7 +183,7 @@ function Loggedout() {
                             })
                             .catch((err) => { console.log(err) })
                     })
-                // axios.post("http://localhost:5000/setbasketvalue", { addbtnstatus: "Add" })
+                // axios.post("https://bigbasketclone2.onrender.com/setbasketvalue", { addbtnstatus: "Add" })
                 //     .then((data) => {
                 //         console.log(data.data)
                 //         setbsktvalue(data.data)

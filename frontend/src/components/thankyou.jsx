@@ -13,9 +13,9 @@ function Thankyou() {
     useEffect(() => {
         setbsktvalue(0)
 
-        // setTimeout(() => {
-        //     navigate('/')
-        // }, 8000);
+        setTimeout(() => {
+            navigate('/')
+        }, 8000);
 
     })
 
